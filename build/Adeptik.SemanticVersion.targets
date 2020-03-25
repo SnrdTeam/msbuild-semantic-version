@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <!--
+    Checks whether SourceRevisionId property would be considered in Informational Version.
+  -->
+  <Target Name="_CheckSourceRevisionIdPreconditions"
+          AfterTargets="AddSourceRevisionToInformationalVersion"
+          Condition="'$(SourceRevisionId)' != ''">
+
+    <Warning Condition="'$(SourceControlInformationFeatureSupported)' != 'true'"
+             Text="SourceRevisionId will not be considered because SourceControlInformationFeatureSupported is not 'true'." />
+    <Warning Condition="'$(IncludeSourceRevisionInInformationalVersion)' != 'true'"
+             Text="SourceRevisionId will not be considered because IncludeSourceRevisionInInformationalVersion is not 'true'." />
+
+  </Target>
+
+  <!--
+   Verifies that the value of the Version property is compliant with SemVer 2.0.
+  -->
+  <Target Name="ValidateSemanticVersion"
+          BeforeTargets="BeforeCompile;CoreCompile"
+          Condition="'$(ValidateSemanticVersion)' == 'true'">
+
+    <!-- Regular expression from https://github.com/semver/semver/issues/232 -->
+    <Error Condition="!$([System.Text.RegularExpressions.Regex]::IsMatch($(Version), `^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(-(0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(\.(0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*)?(\+[0-9a-zA-Z-]+(\.[0-9a-zA-Z-]+)*)?$`, RegexOptions.None))"
+           Text="Version '$(Version)' has invalid format. See https://semver.org" />
+
+  </Target>
+  
+</Project>
