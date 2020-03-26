@@ -9,9 +9,23 @@
           Condition="'$(SourceRevisionId)' != ''">
 
     <Warning Condition="'$(SourceControlInformationFeatureSupported)' != 'true'"
+             Code="ADVER001"
              Text="SourceRevisionId will not be considered because SourceControlInformationFeatureSupported is not 'true'." />
     <Warning Condition="'$(IncludeSourceRevisionInInformationalVersion)' != 'true'"
+             Code="ADVER002"
              Text="SourceRevisionId will not be considered because IncludeSourceRevisionInInformationalVersion is not 'true'." />
+
+  </Target>
+
+  <!--
+    Checks whether Version property validation is enabled.
+  -->
+  <Target Name="_CheckSemanticVersionIntegrity"
+          BeforeTargets="BeforeCompile;CoreCompile"
+          Condition="'$(ValidateSemanticVersion)' != 'true'">
+
+    <Warning Code="ADVER003"
+             Text="Semantic Version validation disabled. Set ValidateSemanticVersion property to 'true'" />
 
   </Target>
 
