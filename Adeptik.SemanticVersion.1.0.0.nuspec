@@ -3,13 +3,13 @@
   <metadata>
     <id>Adeptik.SemanticVersion</id>
     <version>1.0.0</version>
-    <title>Adeptik Semantic Version for C# projects</title>
+    <title>Adeptik Semantic Version support for C# projects</title>
     <authors>azhogin</authors>
     <owners>Adeptik,SnrdTeam</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>https://raw.githubusercontent.com/SnrdTeam/msbuild-semantic-version/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/SnrdTeam/msbuild-semantic-version</projectUrl>
-    <description>Adds semantic versioning to the C# projects.</description>
+    <description>Adds semantic version support to a C# projects.</description>
     <copyright>Adeptik</copyright>
     <tags>semantic_version semver</tags>
   </metadata>
