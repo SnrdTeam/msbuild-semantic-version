@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Adeptik.SemanticVersion</id>
+    <version>1.0.0</version>
+    <title>Adeptik Semantic Version support for C# projects</title>
+    <authors>azhogin</authors>
+    <owners>Adeptik,SnrdTeam</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://raw.githubusercontent.com/SnrdTeam/msbuild-semantic-version/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/SnrdTeam/msbuild-semantic-version</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/SnrdTeam/snrd-icons/master/development-icons/dotnet-icon%4064.png</iconUrl>
+    <description>Adds semantic version support to a C# projects.</description>
+    <copyright>Adeptik</copyright>
+    <tags>semantic_version semver</tags>
+  </metadata>
+  <files>
+    <file src="build\Adeptik.SemanticVersion.props" target="build\Adeptik.SemanticVersion.props" />
+    <file src="build\Adeptik.SemanticVersion.targets" target="build\Adeptik.SemanticVersion.targets" />
+  </files>
+</package>
