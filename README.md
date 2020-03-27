@@ -3,7 +3,7 @@
 Adeptik Semantic Version support for C# projects.
 
 ![Build status](https://tfs.adeptik.com/Adeptik/_apis/public/build/definitions/5f6da651-409b-4516-b0c6-16518d60e6e9/142/badge)
-![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/Adeptik.SemanticVersion)
+[![Nuget Package](https://img.shields.io/nuget/vpre/Adeptik.SemanticVersion)](https://www.nuget.org/packages/Adeptik.SemanticVersion)
 
 ## Version in .NET Core project
 
