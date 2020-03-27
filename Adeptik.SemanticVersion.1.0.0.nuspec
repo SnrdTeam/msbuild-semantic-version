@@ -9,6 +9,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>https://raw.githubusercontent.com/SnrdTeam/msbuild-semantic-version/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/SnrdTeam/msbuild-semantic-version</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/SnrdTeam/snrd-icons/master/development-icons/dotnet-icon%4064.png</iconUrl>
     <description>Adds semantic version support to a C# projects.</description>
     <copyright>Adeptik</copyright>
     <tags>semantic_version semver</tags>
